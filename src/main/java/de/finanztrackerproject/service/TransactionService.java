@@ -29,4 +29,42 @@ public class TransactionService {
 
         return balance;
     }
+
+    public double berechneEinnahmen() {
+        double total = 0;
+        for (Transaction t : transactions) {
+            if (t.getType().equals("Einkommen")) {
+                total += t.getAmount();
+            }
+        }
+        return total;
+    }
+
+
+    public double berechneAusgaben() {
+        double total = 0;
+        for (Transaction t : transactions) {
+            if (t.getType().equals("Ausgabe")) {
+                total += t.getAmount();
+            }
+        }
+        return total;
+    }
+
+    public void zeigeTransaktion() {
+
+        if (transactions.isEmpty()) {
+            System.out.println("Keine Transaktionen vorhanden.");
+            return;
+        }
+
+        for (Transaction t : transactions) {
+            System.out.println(t);
+        }
+
+    }
+
+
+
+
 }

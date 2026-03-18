@@ -25,4 +25,10 @@ public class Transaction {
     public String getDescription() { return description; }
     public String getDate() { return date; }
 
+    @Override
+    public String toString() {
+        return date + " | " + type + " | " + category + " | " + amount + " | " + description;
+    }
+
+
 }
