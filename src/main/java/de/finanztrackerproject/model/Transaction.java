@@ -1,4 +1,5 @@
 package de.finanztrackerproject.model;
+import java.time.LocalDate;
 
 public class Transaction {
 
@@ -7,9 +8,9 @@ public class Transaction {
     private double amount;
     private String category;
     private String description;
-    private String date;
+    private LocalDate date;
 
-    public Transaction(int id, String type, double amount, String category, String description, String date) {
+    public Transaction(int id, String type, double amount, String category, String description, LocalDate date) {
         this.id = id;
         this.type = type;
         this.amount = amount;
@@ -23,7 +24,7 @@ public class Transaction {
     public double getAmount() { return amount; }
     public String getCategory() { return category; }
     public String getDescription() { return description; }
-    public String getDate() { return date; }
+    public LocalDate getDate() { return date; }
 
     @Override
     public String toString() {
