@@ -30,7 +30,7 @@ public class TransactionService {
         return balance;
     }
 
-    public double berechneEinnahmen() {
+    public double calculateIncoming() {
         double total = 0;
         for (Transaction t : transactions) {
             if (t.getType().equals("Einkommen")) {
@@ -41,7 +41,7 @@ public class TransactionService {
     }
 
 
-    public double berechneAusgaben() {
+    public double calculateExpenses() {
         double total = 0;
         for (Transaction t : transactions) {
             if (t.getType().equals("Ausgabe")) {
@@ -51,7 +51,7 @@ public class TransactionService {
         return total;
     }
 
-    public void zeigeTransaktion() {
+    public void showTransaction() {
 
         if (transactions.isEmpty()) {
             System.out.println("Keine Transaktionen vorhanden.");
