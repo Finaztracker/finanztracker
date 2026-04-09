@@ -40,8 +40,11 @@ public class ConsoleUI {
                 service.addTransaction(t);
                 System.out.println("Gespeichert!");
             } else if (wahl == 2) {
-                service.zeigeTransaktion();
+                service.showTransaction();
             } else if (wahl == 3) {
+                System.out.println("\n--- FINANZÜBERSICHT ---");
+                System.out.println("Gesamteinnahmen: " + service.calculateIncoming() + "€");
+                System.out.println("Gesamtausgaben:  " + service.calculateExpenses() + "€");
                 System.out.println("Aktueller Saldo: " + service.calculateBalance() + "€");
             } else if (wahl == 4) {
                 running = false;
