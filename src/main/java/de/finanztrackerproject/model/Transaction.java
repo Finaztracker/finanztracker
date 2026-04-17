@@ -1,9 +1,8 @@
 package de.finanztrackerproject.model;
-import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Transaction implements Serializable {
-    
+public class Transaction {
+
 
     private int id;
     private String type;

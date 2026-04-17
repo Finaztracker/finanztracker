@@ -3,7 +3,7 @@ package de.finanztrackerproject.service;
 import de.finanztrackerproject.model.Transaction;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.*;
+import java.time.LocalDate;
 
 public class TransactionService {
 
@@ -65,25 +65,7 @@ public class TransactionService {
 
     }
 
-    public void saveToFile() {
-        try {
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("data.dat"));
-            out.writeObject(transactions);
-            out.close();
-        } catch (IOException e) {
-            System.out.println("Fehler beim Speichern!");
-        }
-    }
 
-    public void loadFromFile() {
-        try {
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.dat"));
-            transactions = (List<Transaction>) in.readObject();
-            in.close();
-        } catch (Exception e) {
-            System.out.println("Keine alten Daten gefunden.");
-        }
-    }
 
 
 }

@@ -12,7 +12,7 @@ public class ConsoleUI {
     private Scanner scanner = new Scanner(System.in);
 
     public void start() {
-        service.loadFromFile();
+
         boolean running = true;
 
         while (running) {
@@ -48,7 +48,7 @@ public class ConsoleUI {
                 System.out.println("Gesamtausgaben:  " + service.calculateExpenses() + "€");
                 System.out.println("Aktueller Saldo: " + service.calculateBalance() + "€");
             } else if (wahl == 4) {
-                service.saveToFile();
+
                 running = false;
                 System.out.println("Gespeichert! Tschüss!");
             }
