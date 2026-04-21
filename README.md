@@ -15,7 +15,7 @@ Der Fokus liegt auf einer sauberen Programmlogik, strukturierter Datenverwaltung
 - Ausgaben hinzufügen
 - Transaktionen anzeigen
 - Gesamtsaldo berechnen
-- Speicherung der Daten in einer Datenbank
+- Speicherung der Daten in einer Datenbank (Optional)
 
 Optional (Wenn Zeit bleibt):
 - JavaFX Benutzeroberfläche
@@ -54,4 +54,4 @@ Zur Versionsverwaltung verwenden wir:
 
 ## ⏰ Projektstatus
 
-Noch in Entwicklung
+Fertig! :D
